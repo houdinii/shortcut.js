@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A quick example of usage</title>
+    <script src="./shortcut.js"></script>
+</head>
+<body>
+If you want to capture the 'f11' key for example, you would create a shortcut and assign it a function to call on press.
+Usually F11 full screens the display. This will override that event.
+
+<script>
+    function doF11Event(){
+        alert("F11 Was Pressed!");
+    }
+    function doEnterEvent(){
+        alert("Enter Was Pressed!");
+    }
+    shortcut.add("f11", function doKeyCheck() {
+        doF11Event();
+    });
+    shortcut.add("enter", function doKeyCheck() {
+        doEnterEvent();
+    });
+</script>
+</body>
+</html>
